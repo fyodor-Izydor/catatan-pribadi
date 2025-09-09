@@ -3,14 +3,13 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD2WFqUoCqvJA3gU8wr7D1jbQBtJzYKbrk",
-  authDomain: "catatan-pribadi-4e294.firebaseapp.com",
-  projectId: "catatan-pribadi-4e294",
-  // storageBucket: "catatan-pribadi-4e294.firebasestorage.app",
-  storageBucket: "catatan-pribadi-4e294.appspot.com",
-  messagingSenderId: "383956212715",
-  appId: "1:383956212715:web:11575f4f9d79bb248ad7ae",
-  measurementId: "G-GYC0W9BJ9G"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
 export const app = initializeApp(firebaseConfig);
