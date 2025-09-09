@@ -10,7 +10,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { getAuth, signOut } from "firebase/auth";
-import { db } from "../../lib/firebase";
+import { db } from "@/lib/firebase";
 import { useRouter } from "next/navigation";
 
 export default function DashboardPage() {
